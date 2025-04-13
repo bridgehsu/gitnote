@@ -5,7 +5,8 @@ import Contact from './Contact.vue'
 const items = ref([
   { id: 1, text: 'Blog方案指导', price: '88RMB' },
   { id: 2, text: 'VitePress指导', price: '50RMB' },
-  { id: 3, text: 'Nginx证书配置', price: '30RMB' }
+  { id: 3, text: 'Nginx证书配置', price: '30RMB' },
+  { id: 4, text: '撮合引擎讲解', price: '50MB' }
 ])
 
 // 导航按钮跳转函数
