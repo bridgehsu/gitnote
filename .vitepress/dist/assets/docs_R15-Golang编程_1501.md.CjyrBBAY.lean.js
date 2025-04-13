@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./framework-Cfw8I1ux.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/R15-Golang编程/1501.md","filePath":"docs/R15-Golang编程/1501.md"}'),o={name:"docs/R15-Golang编程/1501.md"};function s(c,n,r,d,_,p){return a(),t("div")}const m=e(o,[["render",s]]);export{l as __pageData,m as default};

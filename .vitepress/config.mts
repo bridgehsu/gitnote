@@ -388,12 +388,36 @@ export default defineConfig({
                     "link": "/docs/R06-消息队列/0600-KFK笔记/060009.md"
                 }
             ],
-            '/docs/R04-Redis笔记':[
+            '/docs/R04-Redis笔记': [
                 {
-                    text: '基础结构',
-                    link: '/docs/R04-Redis笔记/0000.md'
+                    text: '🏗️ 基础结构',
+                    link: '/docs/R04-Redis笔记/0400.md'
                 },
-            ],
+                {
+                    text: '🔄 事务机制',
+                    link: '/docs/R04-Redis笔记/0401.md'
+                },
+                {
+                    text: '🗂️ 分区实现',
+                    link: '/docs/R04-Redis笔记/0402.md'
+                },
+                {
+                    text: '🔒 分布式锁',
+                    link: '/docs/R04-Redis笔记/0403.md'
+                },
+                {
+                    text: '🌱 布隆过滤器',
+                    link: '/docs/R04-Redis笔记/0404.md'
+                },
+                {
+                    text: '🛑 缓存问题',
+                    link: '/docs/R04-Redis笔记/0405.md'
+                },
+                {
+                    text: '🔑 缓存一致性',
+                    link: '/docs/R04-Redis笔记/0406.md'
+                },
+            ]
         },
         footer: {
             copyright: 'Copyright © 2024-present rzcode.com'
