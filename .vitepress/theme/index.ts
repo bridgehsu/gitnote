@@ -7,10 +7,9 @@ import ArticleMetadata from "./components/ArticleMetadata.vue";
 import BackTop  from './components/BackTop.vue';
 
 
-
 // 广告组件 - 客户端专用
 const AdComponent = defineAsyncComponent({
-  loader: () => import('./components/AdComponent.vue'),
+  loader: () => import('./components/TopAd.vue'),
   loadingComponent: () => null,
   delay: 200
 })

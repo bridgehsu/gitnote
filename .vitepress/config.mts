@@ -118,23 +118,19 @@ export default defineConfig({
                 link: '/docs/R15-Golang编程/1500.md'
             },
             {
-                text: '🛢️ MySQL笔记',
-                link: '/docs/R03-MySQL笔记/0300.md'
-            },
-            {
-                text: '📕 Redis笔记',
-                link: '/docs/R04-Redis笔记/0400.md'
-            },
-            {
-                text: '📬 消息队列',
+                text: '编程三宝',
                 items: [
                     {
-                        text: '📨 KFK笔记',
-                        link: '/docs/R06-消息队列/0600-KFK笔记/060000.md'
+                        text: '🛢️ MySQL笔记',
+                        link: '/docs/R03-MySQL笔记/0300.md'
                     },
                     {
-                        text: '📤 RMQ笔记',
-                        link: '/docs/R06-消息队列/0601-RMQ笔记/060100.md'
+                        text: '📕 Redis笔记',
+                        link: '/docs/R04-Redis笔记/0400.md'
+                    },
+                    {
+                        text: '📬 消息队列',
+                        link: '/docs/R06-消息队列/0600-KFK笔记/060000.md'
                     }
                 ]
             },
@@ -165,6 +161,21 @@ export default defineConfig({
             },
         ],        
         sidebar: {
+            '/docs/R06-消息队列/': [
+                {
+                    text: '消息队列',
+                    items: [
+                        {
+                            text: '📨 KFK笔记',
+                            link: '/docs/R06-消息队列/0600-KFK笔记/060000.md'
+                        },
+                        {
+                            text: '📤 RMQ笔记',
+                            link: '/docs/R06-消息队列/0601-RMQ笔记/060100.md'
+                        }
+                    ]
+                }
+            ],
             '/docs/R00-数据结构/': [
                 {
                     text: '写在前面',
