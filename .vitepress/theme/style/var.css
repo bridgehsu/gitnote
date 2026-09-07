@@ -1,12 +1,11 @@
 :root {
-  --primary-color: #1890ff; /* 主色 */
-  --link-color: #1890ff;    /* 链接色 */
-  --success-color: #52c41a; /* 成功色 */
-  --warning-color: #faad14; /* 警告色 */
-  --error-color: #f5222d;   /* 错误色 */
+  --primary-color: #1890ff;
+  --link-color: #1890ff;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #f5222d;
 }
 
-/* 覆盖 Ant Design 变量 */
 :root {
   --ant-primary-color: var(--primary-color);
   --ant-link-color: var(--link-color);
@@ -15,7 +14,6 @@
   --ant-error-color: var(--error-color);
 }
 
-/* .vitepress/theme/style/var.css */
 .VPDoc h1 {
   background: -webkit-linear-gradient(10deg, #bd34fe 5%, #e43498 15%);
   background-clip: text;
@@ -23,7 +21,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* var.css */
 .vp-doc a {
   text-decoration: none;
 }

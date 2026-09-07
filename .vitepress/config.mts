@@ -3,8 +3,8 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
     cleanUrls: true, 
     appearance:'dark',  
-    title: "RZCODE｜归零码",
-    description: "归零码｜面试宝典｜JAVA面试宝典｜Golang中文网｜Java中文网",
+    title: "GitNote",
+    description: "个人技术笔记",
     head: [
         ['link',
             {
@@ -32,8 +32,7 @@ export default defineConfig({
         optimizeDeps: {
             include: [
                 'ant-design-vue',
-                '@ant-design/icons-vue',
-                '@ant-design/icons-svg'
+                '@ant-design/icons-vue'
             ],
             exclude: ['@vue/server-renderer']
         },
@@ -41,8 +40,6 @@ export default defineConfig({
             noExternal: [
                 /^ant-design-vue/,
                 /^@ant-design/,
-                /^lodash-es/,
-                'dayjs',
                 'vue'
             ]
         }
@@ -56,7 +53,9 @@ export default defineConfig({
         config: (md) => {
             md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
                 let htmlResult = slf.renderToken(tokens, idx, options);
-                if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`; 
+                if (tokens[idx].tag === 'h1' && env.relativePath !== 'index.md') {
+                    htmlResult += `<ArticleMetadata />`;
+                }
                 return htmlResult;
             }
           }
@@ -75,10 +74,6 @@ export default defineConfig({
             label: '本页导航'
         },
         nav: [
-            {
-                text: '🏠 首页',
-                link: '/'
-            },
             {
                 text: '📚 编程基础',
                 items: [
@@ -156,8 +151,17 @@ export default defineConfig({
                 link: '/docs/R09-编程思考/0901-服务限流.md'
             },
             {
-                text: '✨ 优质服务',
-                link: '/service.md'
+                text: '工程实践',
+                items: [
+                    {
+                        text: '经历综述',
+                        link: '/docs/R21-工程实践/2109-经历综述.md'
+                    },
+                    {
+                        text: '专题索引',
+                        link: '/docs/R21-工程实践/2100.md'
+                    }
+                ]
             },
         ],        
         sidebar: {
@@ -399,6 +403,53 @@ export default defineConfig({
                     "link": "/docs/R06-消息队列/0600-KFK笔记/060009.md"
                 }
             ],
+            '/docs/R21-工程实践/': [
+                {
+                    text: '工程实践',
+                    items: [
+                        {
+                            text: '经历综述',
+                            link: '/docs/R21-工程实践/2109-经历综述.md'
+                        },
+                        {
+                            text: '专题索引',
+                            link: '/docs/R21-工程实践/2100.md'
+                        },
+                        {
+                            text: '项目深挖',
+                            link: '/docs/R21-工程实践/2101-项目深挖.md'
+                        },
+                        {
+                            text: '交易撮合与账务',
+                            link: '/docs/R21-工程实践/2102-交易撮合与账务.md'
+                        },
+                        {
+                            text: '对账告警与数据平台',
+                            link: '/docs/R21-工程实践/2103-对账告警与数据平台.md'
+                        },
+                        {
+                            text: 'AI Agent 与 ChatCLI',
+                            link: '/docs/R21-工程实践/2104-AI-Agent与ChatCLI.md'
+                        },
+                        {
+                            text: '桌面端与终端安全',
+                            link: '/docs/R21-工程实践/2105-桌面端与终端安全.md'
+                        },
+                        {
+                            text: '微服务与中间件',
+                            link: '/docs/R21-工程实践/2106-微服务与中间件.md'
+                        },
+                        {
+                            text: '链上钱包与多链',
+                            link: '/docs/R21-工程实践/2107-链上钱包与多链.md'
+                        },
+                        {
+                            text: '协作与交付',
+                            link: '/docs/R21-工程实践/2108-资深岗场景.md'
+                        }
+                    ]
+                }
+            ],
             '/docs/R04-Redis笔记': [
                 {
                     text: '🏗️ 基础结构',
@@ -431,7 +482,7 @@ export default defineConfig({
             ]
         },
         footer: {
-            copyright: 'Copyright © 2024-present rzcode.com'
+            copyright: 'Copyright © 2024-present GitNote'
         }
     },
     sitemap: {

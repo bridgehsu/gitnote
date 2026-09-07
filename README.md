@@ -1,1 +1,3 @@
-# luckycoin.meme
+# GitNote
+
+个人技术笔记。
