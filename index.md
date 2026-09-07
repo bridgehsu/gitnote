@@ -2,6 +2,6 @@
 layout: page
 ---
 <script setup>
-import Entry from './components/Entry/index.vue'
+import Entry from './components/entry/index.vue'
 </script>
 <Entry />
