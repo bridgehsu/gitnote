@@ -486,6 +486,6 @@ export default defineConfig({
         }
     },
     sitemap: {
-        hostname: 'https://rzcode.com',
+        hostname: 'https://gitnote.me',
     },
 })
